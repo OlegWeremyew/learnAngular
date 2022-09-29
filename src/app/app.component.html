@@ -1,2 +1,16 @@
-<inst-test1></inst-test1>
-<inst-test2></inst-test2>
+<button type="button" [disabled]="appIsLoading">Send</button>
+<hr />
+<div>
+  <h1>{{ appTitle }}</h1>
+  <button (click)="changeTitleHandler()">Change Title</button>
+</div>
+<hr />
+<div>
+  <h1>{{ inputText }}</h1>
+  <input type="text" (input)="changeTextHandler($event)" />
+</div>
+<hr />
+<div>
+  <h1>{{ inputText }}</h1>
+  <input type="text" (keyup.enter)="changeTextHandler($event)" />
+</div>
